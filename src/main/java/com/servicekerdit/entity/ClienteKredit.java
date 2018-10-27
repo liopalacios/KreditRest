@@ -1,9 +1,6 @@
 package com.servicekerdit.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,6 +12,7 @@ import java.io.Serializable;
 @Data
 @Entity
 @ToString
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class ClienteKredit implements Serializable {

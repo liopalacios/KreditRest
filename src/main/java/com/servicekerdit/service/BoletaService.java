@@ -10,7 +10,11 @@ import java.util.Map;
 public interface BoletaService {
     BoletaKredit findBoletaKreditBySereid(int idboleta);
 
-    List<BoletaKredit> findBoletaKreditByClienteid(String dnicliente);
+    List<BoletaKredit> findBoletaKreditByClienteid(String dnicliente,int page, int porpage);
 
     List<BoletaKredit> revisaBoletaKredit(String clienteid) throws ParseException;
+
+    long countByClienteid(String idcliente);
+
+    void save(BoletaKredit boletaKredit);
 }

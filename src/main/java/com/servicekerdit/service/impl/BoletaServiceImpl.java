@@ -6,16 +6,22 @@ import com.servicekerdit.entity.ClienteKredit;
 import com.servicekerdit.repository.BoletaRepository;
 import com.servicekerdit.service.BoletaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 @Service
 public class BoletaServiceImpl implements BoletaService {
 
     private static final int ESTNE = 0;
+
     @Autowired
     BoletaRepository boletaRepository;
 
@@ -25,29 +31,48 @@ public class BoletaServiceImpl implements BoletaService {
     }
 
     @Override
-    public List<BoletaKredit> findBoletaKreditByClienteid(String dnicliente) {
+    public List<BoletaKredit> findBoletaKreditByClienteid(String idcliente, int page, int porpage) {
 
-        return boletaRepository.findByClienteidOrderByFechaimpDesc(ClienteKredit.builder().clienteidp(dnicliente).build());
+        Pageable pageable = new PageRequest(page-1, porpage);
+        List<BoletaKredit> boletaKredits = boletaRepository.findByClienteid_ClienteidOrderByFechaimpDesc(idcliente,pageable);
+        return boletaKredits;
 
     }
 
     @Override
     public List<BoletaKredit> revisaBoletaKredit(String clienteid) throws ParseException {
-        String sDate1="28-08-2018";
-        Date date1=new SimpleDateFormat("dd-MM-yyyy").parse(sDate1);
-        List<BoletaKredit> boletaKredits = boletaRepository.findByClienteidAndEstadoenvAndFechaimp(ClienteKredit.builder().clienteidp(clienteid).build(),ESTNE,date1);
+        DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+
+        ClienteKredit clienteKredit = new ClienteKredit(clienteid);
+        //List<BoletaKredit> boletaKredits = null;
+
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        String dateInString = "30-10-2018";
+        Date date = sdf.parse(dateInString);
+        Date date1 = new Date();
+        System.out.println(date1); //Tue Aug 31 10:20:56 SGT 1982
+
+        List<BoletaKredit> boletaKredits = boletaRepository.findByClienteidAndEstadoenvAndFechaimp(
+                ClienteKredit.builder().clienteid(clienteid).build(),ESTNE,date1);
 
         for(BoletaKredit boletaKredit: boletaKredits){
             if(boletaKredit.getEstadoenv()==0){
 
             }
-            System.out.print(boletaKredit.getSerieid()+" "+boletaKredit.getSubtotal()+"\n");
+           // System.out.print(boletaKredit.getSerieid()+" "+boletaKredit.getSubtotal()+"\n");
         }
 
-
-
-
-
         return boletaKredits;
+    }
+
+    @Override
+    public long countByClienteid(String idcliente) {
+        return boletaRepository.countByClienteid(ClienteKredit.builder().clienteid(idcliente).build());
+    }
+
+    @Override
+    public void save(BoletaKredit boletaKredit) {
+        System.out.print(boletaKredit);
+        boletaRepository.save(boletaKredit);
     }
 }

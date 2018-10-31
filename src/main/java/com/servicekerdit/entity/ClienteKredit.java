@@ -1,15 +1,14 @@
 package com.servicekerdit.entity;
 
 import lombok.*;
+import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Table(name = "pstc_cliente")
-@Data
+@Getter
+@Setter
 @Entity
 @ToString
 @Builder
@@ -19,8 +18,7 @@ public class ClienteKredit implements Serializable {
 
     @Id
     @Column(name = "co_cliente")
-    private String clienteidp;
-
+    private String clienteid;
 
     @Column(name = "co_empresa")
     private String empresa;
@@ -44,5 +42,7 @@ public class ClienteKredit implements Serializable {
     private String direccion;
 
 
-
+    public ClienteKredit(String clienteid) {
+        this.clienteid=clienteid;
+    }
 }

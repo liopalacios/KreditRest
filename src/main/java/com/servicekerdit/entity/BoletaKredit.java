@@ -7,47 +7,31 @@ import javax.validation.Valid;
 import java.io.Serializable;
 
 import java.sql.Time;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Table(name = "pstc_comprobante_pago")
 @Entity
-@Data
 @Builder
-@ToString
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class BoletaKredit implements Serializable {
 
-    @Valid
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name="co_cliente", insertable=false,updatable=false)
+    @EmbeddedId
+    private BoletaKreditIdentity boletaKreditIdentity;
+
+    //@Valid
+    @ManyToOne
+    @JoinColumn(name="co_cliente")
     private ClienteKredit clienteid;
-
-    @Column(name = "co_serie")
-    private String serieid;
-
-    @Id
-    @Column(name = "nu_comprobante")
-    private Integer comprobanteid;
-
-    @Column(name = "co_empresa")
-    private String empresa;
-
-    @Column(name = "co_oficina")
-    private String oficina;
-
-    @Column(name = "co_producto")
-    private String producto;
-
-    @Valid
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name="co_tipo_doc_pago", insertable=false,updatable=false)
-    private TipoMovimientoKredit tipopago;
 
     @Column(name = "nu_contrato")
     private String nucontrato;
 
     @Column(name = "fe_impresion")
+    @Temporal(TemporalType.DATE)
     private Date fechaimp;
 
     @Column(name = "ho_crea_registro")
@@ -68,5 +52,19 @@ public class BoletaKredit implements Serializable {
     @Column(name = "estadoenv")
     private int estadoenv;
 
+    @Column(name = "estadomnsag")
+    private int estadomnsag;
+
+    @Column(name = "linkticket")
+    private String linkticket;
+
+    @Column(name = "linkpdf")
+    private String linkpdf;
+
+    @Column(name = "linkxml")
+    private String linkxml;
+
+    @Column(name = "mnsagsunat")
+    private String mnsagsunat;
 
 }

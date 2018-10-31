@@ -2,10 +2,8 @@ package com.servicekerdit.entity;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import javax.validation.Valid;
 import java.io.Serializable;
 
 
@@ -35,11 +33,11 @@ public class BoletaDetalleKredit implements Serializable {
     @Column(name = "nu_detalle")
     private Integer nudetalle;
 
-    @Column(name = "co_producto")
-    private String producto;
-    //"codigo_producto_interno": "01",
 
-
+    @Valid
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name="co_producto", insertable=false,updatable=false)
+    private ProductoKredit producto;
 
 
     @Column(name = "va_igv")

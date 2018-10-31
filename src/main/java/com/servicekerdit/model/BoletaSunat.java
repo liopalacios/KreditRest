@@ -3,6 +3,7 @@ package com.servicekerdit.model;
 import lombok.*;
 
 
+import java.math.BigDecimal;
 import java.sql.Time;
 import java.util.Date;
 import java.util.List;
@@ -28,21 +29,21 @@ public class BoletaSunat {
     private String cliente_direccion;
     private String cliente_email;
 
-    private double total_venta_exportacion;
-    private double total_venta_gravadas;
-    private double total_venta_inafectas;
-    private double total_venta_exoneradas;
-    private double total_venta_gratuitas;
+    private BigDecimal total_venta_exportacion;
+    private BigDecimal total_venta_gravadas;
+    private BigDecimal total_venta_inafectas;
+    private BigDecimal total_venta_exoneradas;
+    private BigDecimal total_venta_gratuitas;
 
-    private double total_imp_ope_grat;
-    private double total_descuento;
-    private double total_igv;
-    private double total_isc;
-    private double total_otros_tributos;
-    private double descuentos_globales;
+    private BigDecimal total_imp_ope_grat;
+    private BigDecimal total_descuento;
+    private BigDecimal total_igv;
+    private BigDecimal total_isc;
+    private BigDecimal total_otros_tributos;
+    private BigDecimal descuentos_globales;
 
-    private double total_otros_cargos;
-    private double importe_total;
+    private BigDecimal total_otros_cargos;
+    private BigDecimal importe_total;
     private String tipo_operacion;
     private String tipo_nota_credito;
     private String tipo_nota_debito;
@@ -54,7 +55,7 @@ public class BoletaSunat {
 
     private String orden_compra;
     private String detraccion;
-    private double porcentaje_detraccion;
+    private BigDecimal porcentaje_detraccion;
     private String codigo_estado;
     private String tipo_estado;
     private String mensaje;

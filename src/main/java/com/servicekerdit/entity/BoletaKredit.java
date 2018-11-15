@@ -11,6 +11,7 @@ import java.time.LocalDate;
 import java.util.Date;
 
 @Table(name = "pstc_comprobante_pago")
+@IdClass(BoletaKreditIdentity.class)
 @Entity
 @Builder
 @NoArgsConstructor
@@ -19,8 +20,33 @@ import java.util.Date;
 @Setter
 public class BoletaKredit implements Serializable {
 
-    @EmbeddedId
-    private BoletaKreditIdentity boletaKreditIdentity;
+  //  @EmbeddedId
+ //   private BoletaKreditIdentity boletaKreditIdentity;
+    @Id
+    @Column(name = "co_empresa")
+    private String empresa;
+
+    @Id
+    @Column(name = "co_oficina")
+    private String oficina;
+
+    @Id
+    @Column(name = "co_producto")
+    private String producto;
+
+    @Id
+    @Column(name = "co_serie")
+    private String serieid;
+
+    @Id
+    @Column(name = "nu_comprobante")
+    private Integer comprobanteid;
+
+    @Valid
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name="co_tipo_doc_pago", insertable=false,updatable=false)
+    private TipoMovimientoKredit tipopago;
+
 
     //@Valid
     @ManyToOne

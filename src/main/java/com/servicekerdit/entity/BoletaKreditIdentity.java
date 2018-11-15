@@ -11,48 +11,57 @@ import java.util.Objects;
 @Embeddable
 public class BoletaKreditIdentity implements Serializable {
 
-    @Id
+
     @Column(name = "co_serie")
     private String serieid;
 
-    @Id
+
     @Column(name = "nu_comprobante")
     private Integer comprobanteid;
 
-    @Id
+
     @Column(name = "co_empresa")
     private String empresa;
 
-    @Id
+
     @Column(name = "co_oficina")
     private String oficina;
 
-    @Id
+
     @Column(name = "co_producto")
     private String producto;
 
-    @Id
-    @Valid
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name="co_tipo_doc_pago", insertable=false,updatable=false)
-    private TipoMovimientoKredit tipopago;
+
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof BoletaKreditIdentity)) return false;
-        BoletaKreditIdentity that = (BoletaKreditIdentity) o;
-        return Objects.equals(serieid, that.serieid) &&
-                Objects.equals(comprobanteid, that.comprobanteid) &&
-                Objects.equals(empresa, that.empresa) &&
-                Objects.equals(oficina, that.oficina) &&
-                Objects.equals(producto, that.producto) &&
-                Objects.equals(tipopago, that.tipopago);
+    public boolean equals(Object obj) {
+        try {
+
+            if (this == obj) return true;
+
+            return serieid.equals(((BoletaKredit)obj).getSerieid()) &&
+
+                    comprobanteid.equals(((BoletaKredit)obj).getComprobanteid()) &&
+
+                    empresa.equals(((BoletaKredit)obj).getEmpresa())&&
+
+                    oficina.equals(((BoletaKredit)obj).getOficina())&&
+
+                    producto.equals(((BoletaKredit)obj).getProducto());
+
+
+
+        } catch (Throwable ignored) { //catch NP & Cast Exceptions
+
+            return false;
+
+        }
+
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(serieid, comprobanteid, empresa, oficina, producto, tipopago);
+        return Objects.hash(serieid + comprobanteid + empresa + oficina + producto);
     }
 }

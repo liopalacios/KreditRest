@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.servicekerdit.entity.BoletaDetalleKredit;
 import com.servicekerdit.entity.BoletaKredit;
 import com.servicekerdit.entity.ClienteKredit;
+import com.servicekerdit.entity.MovimientoCasaCambio;
 import com.servicekerdit.model.BoletaSunat;
 import com.servicekerdit.model.DetalleSunat;
 import com.servicekerdit.model.ResponseMultinet;
@@ -12,6 +13,7 @@ import com.servicekerdit.service.BoletaDetalleService;
 import com.servicekerdit.service.BoletaService;
 import com.servicekerdit.service.ClienteService;
 import com.google.common.collect.ImmutableMap;
+import com.servicekerdit.service.MovimientoCasaCambioService;
 import com.servicekerdit.service.impl.BoletaServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -66,20 +68,26 @@ public class BoletaController {
     @Autowired
     BoletaDetalleService boletaDetalleService;
 
+    @Autowired
+    MovimientoCasaCambioService movimientoCasaCambioService;
 
-    public Map<String, Object> sendBoleta( int nucomprobante) throws JsonProcessingException {
+    public Map<String, Object> sendBoleta( BoletaKredit boletaKredit) throws JsonProcessingException {
 
         HttpEntity<LinkedMultiValueMap<String, Object>> requestEntity;
         LinkedMultiValueMap<String, Object> map;
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-        BoletaKredit boletaKredit = boletaService.findBoletaKreditBySereid(nucomprobante);
-        BoletaDetalleKredit boletaDetalleKredit = boletaDetalleService.findBySerieidAndComprobanteid(boletaKredit.getBoletaKreditIdentity().getSerieid(), boletaKredit.getBoletaKreditIdentity().getComprobanteid());
+        //BoletaKredit boletaKredit = boletaService.findBoletaKreditBySereid(nucomprobante);
+        BoletaKredit boletaKredit1 = new BoletaKredit();
+
+
+        BoletaDetalleKredit boletaDetalleKredit = boletaDetalleService.findBySerieidAndComprobanteid(boletaKredit.getSerieid(), boletaKredit.getComprobanteid());
         ArrayList<DetalleSunat> detalleSunats= new ArrayList<>();
-        System.out.print(nucomprobante+"\n");
+        System.out.print(boletaKredit.toString()+"\n");
+
         BoletaSunat boletaSunat = new BoletaSunat();
         boletaSunat.setDocumento_tipo_comprobante("03");
-        boletaSunat.setDocumento_serie("B"+boletaKredit.getBoletaKreditIdentity().getSerieid());
-        boletaSunat.setDocumento_numero(boletaKredit.getBoletaKreditIdentity().getComprobanteid());
+        boletaSunat.setDocumento_serie("B"+boletaKredit.getSerieid());
+        boletaSunat.setDocumento_numero(boletaKredit.getComprobanteid());
         boletaSunat.setDocumento_fecha_emision(df.format(boletaKredit.getFechaimp()));
         boletaSunat.setDocumento_hora_emision(boletaKredit.getHoregistro());
         boletaSunat.setDocumento_fecha_vencimiento(null);
@@ -169,11 +177,12 @@ public class BoletaController {
                 boletaKredit.setMnsagsunat(response.getBody().getMensaje());
             }
 
-            boletaKredit.setBoletaKreditIdentity(boletaKredit.getBoletaKreditIdentity());
+           // boletaKredit.setBoletaKreditIdentity(boletaKredit.getBoletaKreditIdentity());
 
             boletaService.save(boletaKredit);
         }
-        String numstr = Integer.toString(nucomprobante);
+
+
         //restTemplate.getForEntity("/api/endpoint", ResponseDTO.class).getBody();
         return ImmutableMap.of("objeto",response);
     }
@@ -210,13 +219,18 @@ public class BoletaController {
         responsehhttp.setContentType("application/json");
         responsehhttp.setCharacterEncoding("UTF-8");
         responsehhttp.setHeader("Access-Control-Allow-Origin", "*");
-        List<Map<String, Object>> maps =null;
+        List<Map<String, Object>> maps =new ArrayList<Map<String, Object>>();
         List<BoletaKredit> boletaKredits = boletaService.revisaBoletaKredit(clienteid);
+        //sendBoleta(37119);
+        if(boletaKredits.size()==0){
+            maps.add(ImmutableMap.of("objeto",new Object()));
+        }
         for(BoletaKredit boletaKredit: boletaKredits){
-            maps.add(sendBoleta(boletaKredit.getBoletaKreditIdentity().getComprobanteid()));
+            maps.add(sendBoleta(boletaKredit));
         }
         return maps;
     }
+
 
     @GetMapping(value = "/cliente",produces = "application/json")
     @ResponseBody
@@ -224,6 +238,12 @@ public class BoletaController {
         responsehhttp.setContentType("application/json");
         responsehhttp.setCharacterEncoding("UTF-8");
         responsehhttp.setHeader("Access-Control-Allow-Origin", "*");
+
+
+      //  List<MovimientoCasaCambio> movimientoCasaCambios = movimientoCasaCambioService.findAll();
+
+      //  System.out.print(movimientoCasaCambios.toString());
+
         return clienteService.findByClienteidp(clienteid);
     }
 

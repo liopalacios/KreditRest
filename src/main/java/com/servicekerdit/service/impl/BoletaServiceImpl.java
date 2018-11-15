@@ -3,6 +3,7 @@ package com.servicekerdit.service.impl;
 import com.servicekerdit.entity.BoletaDetalleKredit;
 import com.servicekerdit.entity.BoletaKredit;
 import com.servicekerdit.entity.ClienteKredit;
+import com.servicekerdit.entity.TipoMovimientoKredit;
 import com.servicekerdit.repository.BoletaRepository;
 import com.servicekerdit.service.BoletaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,14 @@ public class BoletaServiceImpl implements BoletaService {
 
     @Override
     public BoletaKredit findBoletaKreditBySereid(int idboleta) {
-        return boletaRepository.findByComprobanteid(idboleta);
+        String coempresa="001";
+        String coficina="001";
+        String coprod="01";
+        String coserie="001";
+
+        String cotipo="01";
+
+        return boletaRepository.findByEmpresaAndOficinaAndProductoAndSerieidAndComprobanteidAndTipopago(coempresa,coficina,coprod,coserie,idboleta,TipoMovimientoKredit.builder().codigo("02").build());
     }
 
     @Override
@@ -61,7 +69,6 @@ public class BoletaServiceImpl implements BoletaService {
             }
            // System.out.print(boletaKredit.getSerieid()+" "+boletaKredit.getSubtotal()+"\n");
         }
-
         return boletaKredits;
     }
 
@@ -73,6 +80,12 @@ public class BoletaServiceImpl implements BoletaService {
     @Override
     public void save(BoletaKredit boletaKredit) {
         System.out.print(boletaKredit);
-        boletaRepository.save(boletaKredit);
+
+        System.out.print(" INSRTENDO BOLETA ACTUALIZADA ");
+        String coempresa="001";
+        String coficina="001";
+        String coprod="01";
+        String cotipo="02";
+        boletaRepository.saveboleta(boletaKredit.getSerieid(),boletaKredit.getComprobanteid(),boletaKredit.getLinkticket(),boletaKredit.getLinkpdf(),boletaKredit.getEmpresa(),boletaKredit.getOficina(),boletaKredit.getProducto(),boletaKredit.getTipopago().getCodigo());
     }
 }

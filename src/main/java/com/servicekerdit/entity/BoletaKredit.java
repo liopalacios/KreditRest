@@ -42,9 +42,13 @@ public class BoletaKredit implements Serializable {
     @Column(name = "nu_comprobante")
     private Integer comprobanteid;
 
+    //
+    @Column(name = "co_tipo_doc_pago")
+    private String cotipopago;
+
     @Valid
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name="co_tipo_doc_pago", insertable=false,updatable=false)
+    @JoinColumn(name="co_tipo_movimiento", insertable=false,updatable=false)
     private TipoMovimientoKredit tipopago;
 
 
@@ -55,6 +59,9 @@ public class BoletaKredit implements Serializable {
 
     @Column(name = "nu_contrato")
     private String nucontrato;
+
+    @Column(name = "co_moneda")
+    private String comoneda;
 
     @Column(name = "fe_impresion")
     @Temporal(TemporalType.DATE)
@@ -75,6 +82,9 @@ public class BoletaKredit implements Serializable {
     @Column(name = "va_topagado")
     private double topagado;
 
+    @Column(name = "va_toamortizado")
+    private double toamortizado;
+
     @Column(name = "estadoenv")
     private int estadoenv;
 
@@ -92,5 +102,14 @@ public class BoletaKredit implements Serializable {
 
     @Column(name = "mnsagsunat")
     private String mnsagsunat;
+
+    @Column(name = "idvoucher")
+    private int idvoucher;
+
+    @Column(name = "id_crea_registro")
+    private String idcrearegistro;
+
+    @Column(name = "codcuotapago")
+    private int cuota;
 
 }

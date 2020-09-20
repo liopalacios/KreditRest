@@ -2,7 +2,10 @@ package com.servicekerdit.repository;
 
 import com.servicekerdit.entity.MovimientoCasaCambio;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Date;
+
 import java.util.List;
 
 public interface MovimientoCasaCambioRepository {
@@ -10,9 +13,11 @@ public interface MovimientoCasaCambioRepository {
 
     List<MovimientoCasaCambio> findFecRegNoEnv(String date1,int page, int limite);
 
-    int countCasacambioByDate(String numdni, String date1);
+    int countCasacambioByDate(int userid, String date1, Connection connectionb) throws SQLException;
 
-    List<MovimientoCasaCambio> findFecReg(String format, int page, int limite);
+    List<MovimientoCasaCambio> findFecReg(java.sql.Date format, int ncaja, int page, int limite, Connection connection) throws SQLException;
 
-    List<MovimientoCasaCambio> findNoSend(String format);
+    List<MovimientoCasaCambio> findNoSend(Date format);
+
+    void save(MovimientoCasaCambio movimientoCasaCambio);
 }

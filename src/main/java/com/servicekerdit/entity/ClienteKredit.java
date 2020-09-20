@@ -36,7 +36,7 @@ public class ClienteKredit implements Serializable {
     private String documento;
 
     @Column(name = "co_tipodocumento")
-    private int documentotipo;
+    private String documentotipo;
 
     @Column(name = "de_direccion")
     private String direccion;

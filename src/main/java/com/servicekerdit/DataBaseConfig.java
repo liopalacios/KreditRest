@@ -23,6 +23,7 @@ public class DataBaseConfig {
 
     @Bean(name = "dsMaster")
     @Primary
+    @Autowired
     @ConfigurationProperties(prefix = "spring.datasource")
     public DataSource masterDataSource() {  //devolverá el datasource para la base de datos database1 con el nombre dsMaster
         return DataSourceBuilder.create().build();

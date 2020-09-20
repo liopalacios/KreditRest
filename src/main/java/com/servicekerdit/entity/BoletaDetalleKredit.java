@@ -5,6 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 import javax.validation.Valid;
 import java.io.Serializable;
+import java.util.Date;
 
 
 @Table(name = "pstd_comprobante_pago")
@@ -19,7 +20,6 @@ public class BoletaDetalleKredit implements Serializable {
     @Column(name = "co_empresa")
     private String empresa;
 
-
     @Column(name = "co_serie")
     private String serieid;
 
@@ -32,7 +32,6 @@ public class BoletaDetalleKredit implements Serializable {
 
     @Column(name = "nu_detalle")
     private Integer nudetalle;
-
 
     @Valid
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
@@ -66,6 +65,22 @@ public class BoletaDetalleKredit implements Serializable {
 
     @Column(name = "va_total_pago")
     private double vatotalpago;
+
+    @Column(name = "va_capital_deuda")
+    private double vacapital;
+
+    @Column(name = "fe_vencimiento")
+    @Temporal(TemporalType.DATE)
+    private Date fechavencimiento;
+
+    @Column(name = "va_comision")
+    private double vacomision;
+
+    @Column(name = "va_prima")
+    private double vaprima;
+
+    @Column(name = "va_otrointeres")
+    private double otrointeres;
     //"precio_total": 180,
     //"precio_venta_unitario": 180,
 

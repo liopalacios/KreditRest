@@ -4,5 +4,5 @@ import com.servicekerdit.entity.BoletaDetalleKredit;
 
 public interface BoletaDetalleService {
 
-    BoletaDetalleKredit findBySerieidAndComprobanteid(String documento_serie, int documento_numero);
+    BoletaDetalleKredit findBySerieidAndComprobanteid(String documento_serie, int documento_numero, String tipo);
 }

@@ -14,7 +14,23 @@ public interface BoletaService {
 
     List<BoletaKredit> revisaBoletaKredit(String clienteid) throws ParseException;
 
+    List<BoletaKredit> revisaBoletaKreditDay() throws ParseException;
+
+    List<BoletaKredit> revisaBoletaKreditdni(String clienteid) throws ParseException;
+
     long countByClienteid(String idcliente);
 
     void save(BoletaKredit boletaKredit);
+
+    List<BoletaKredit> findBoletaKreditByClienteiddni(String clienteid, int pagenumber, int perpage);
+
+    long countByClientedni(String clienteid);
+
+    List<BoletaKredit> revisaBoletaKreditProductContratoMoneda(String productoid, String contratoId, String monedaId) throws ParseException;
+
+    List<BoletaKredit> findBoletaKreditByProductoidAndContratoidAndMonedaid(String productoid, String contratoid, String monedaid, int pagenumber, int perpage);
+
+    long countByProductoidAndContratoidAndMonedaid(String productoid, String contratoid, String monedaid);
+
+
 }

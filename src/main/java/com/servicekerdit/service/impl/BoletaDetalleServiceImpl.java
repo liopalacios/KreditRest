@@ -13,7 +13,8 @@ public class BoletaDetalleServiceImpl implements BoletaDetalleService {
     BoletaDetalleRepository boletaDetalleRepository;
 
     @Override
-    public BoletaDetalleKredit findBySerieidAndComprobanteid(String documento_serie, int documento_numero) {
-        return boletaDetalleRepository.findBySerieidAndComprobanteid(documento_serie,documento_numero);
+    public BoletaDetalleKredit findBySerieidAndComprobanteid(String documento_serie, int documento_numero, String tipopago) {
+        return boletaDetalleRepository.findBySerieidAndComprobanteidAndTipopago(documento_serie,documento_numero, tipopago);
     }
+
 }

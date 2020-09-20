@@ -16,7 +16,7 @@ public class DetalleSunat
     //private boolean inc_igv;
 
     private String unidad_medida;
-    private int cantidad;
+    private BigDecimal cantidad;
     private String descripcion;
     private String codigo_producto_interno;
     private String codigo_producto_sunat;
@@ -40,13 +40,17 @@ public class DetalleSunat
     private BigDecimal ivap;
     private BigDecimal imp_vta_grat;
     private BigDecimal imp_otros_trib;
-    private int porcentaje_igv;
+    private BigDecimal porcentaje_igv;
     private BigDecimal procentaje_ivap;
     private BigDecimal porcentaje_isc;
     private BigDecimal porcentaje_otros_trib;
     private BigDecimal porcentaje_trib_vta_grat;
     private String tipo_afectacion_igv;
     private String tipo_isc;
-
-
+    private Boolean habilitarTipo;
+    private Boolean inc_igv;
+    private Boolean mostraPorc;
+    private BigDecimal precio_total;
+    private Boolean isTextAreaDescription;
+    private String mostrarTransporte;
 }

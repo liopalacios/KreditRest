@@ -49,7 +49,7 @@ public class BoletaSunat {
     private String tipo_nota_debito;
 
     private String documento_afectado_serie;
-    private String documento_afectado_numero;
+    private int documento_afectado_numero;
     private String documento_afectado_tipo_comprobante;
     private String documento_afectado_motivo_nota;
 
@@ -60,7 +60,7 @@ public class BoletaSunat {
     private String tipo_estado;
     private String mensaje;
     private List<DetalleSunat> items;
-
+    private List<CampoAdicional> campos_adicionales;
 
 
     //private boolean editClient;

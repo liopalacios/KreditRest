@@ -14,7 +14,6 @@ import java.util.List;
 public class ClienteCasaCambioServiceImpl implements ClienteCasaCambioService {
 
     Connection connection = null;
-    Connection connectionb = null;
 
     @Autowired
     ClienteCasaCambioRepository clienteCasaCambioRepository;

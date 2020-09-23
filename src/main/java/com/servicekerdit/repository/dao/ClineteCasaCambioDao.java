@@ -48,11 +48,12 @@ public class ClineteCasaCambioDao implements ClienteCasaCambioRepository {
         LOGGER.info(ps.toString());
         try {
             ResultSet rst = ps.executeQuery();
+
             while (rst.next()) {
                 clienteCasaCambio = new ClienteCasaCambio();
                 clienteCasaCambio.setIdClienteCasacambio(rst.getInt("id_cliente_casacambio"));
                 clienteCasaCambio.setNumDocu(rst.getString("numdoc"));
-                clienteCasaCambio.setNumDocu(rst.getString("razon_social"));
+                clienteCasaCambio.setRazonSocial(rst.getString("razon_social"));
                 clienteCasaCambio.setIdTipoDocumento(rst.getInt("id_tipo_documento"));
                 clienteCasaCambios.add(clienteCasaCambio);
             }
@@ -62,6 +63,7 @@ public class ClineteCasaCambioDao implements ClienteCasaCambioRepository {
         }finally {
             connection.close();
         }
+        System.out.println(clienteCasaCambios.size());
         return clienteCasaCambios;
     }
 

@@ -5,82 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bae43dfb-8247-4c16-b6ae-6fdce63f96fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/KreditRest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/entity/ClienteCasaCambio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/entity/MovimientoKredit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/model/CampoAdicional.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/repository/ClienteCasaCambioRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/repository/MovimientoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/repository/con/Conexion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/repository/dao/ClineteCasaCambioDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/service/ClienteCasaCambioService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/service/impl/ClienteCasaCambioServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KreditRest.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servicekerdit/DataBaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/DataBaseConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servicekerdit/MainApplicationClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/MainApplicationClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servicekerdit/controller/BoletaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/controller/BoletaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servicekerdit/controller/CasaCambioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/controller/CasaCambioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servicekerdit/entity/BoletaDetalleKredit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/entity/BoletaDetalleKredit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servicekerdit/entity/BoletaKredit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/entity/BoletaKredit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servicekerdit/entity/ClienteKredit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/entity/ClienteKredit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servicekerdit/entity/MovimientoCasaCambio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/entity/MovimientoCasaCambio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servicekerdit/model/BoletaSunat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/model/BoletaSunat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servicekerdit/model/DetalleSunat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/model/DetalleSunat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servicekerdit/repository/BoletaDetalleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/repository/BoletaDetalleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servicekerdit/repository/BoletaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/repository/BoletaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servicekerdit/repository/MovimientoCasaCambioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/repository/MovimientoCasaCambioRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servicekerdit/repository/dao/MovimientoCasaCambioDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/repository/dao/MovimientoCasaCambioDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servicekerdit/service/BoletaDetalleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/service/BoletaDetalleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servicekerdit/service/BoletaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/service/BoletaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servicekerdit/service/MovimientoCasaCambioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/service/MovimientoCasaCambioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servicekerdit/service/impl/BoletaDetalleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/service/impl/BoletaDetalleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servicekerdit/service/impl/BoletaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/service/impl/BoletaServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/servicekerdit/service/impl/MovimientoCasaCambioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/service/impl/MovimientoCasaCambioServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/KreditRest-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/KreditRest-1.0-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/DataBaseConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/DataBaseConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/MainApplicationClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/MainApplicationClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/controller/BoletaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/controller/BoletaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/controller/CasaCambioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/controller/CasaCambioController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/entity/BoletaDetalleKredit$BoletaDetalleKreditBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/entity/BoletaDetalleKredit$BoletaDetalleKreditBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/entity/BoletaDetalleKredit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/entity/BoletaDetalleKredit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/entity/BoletaKredit$BoletaKreditBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/entity/BoletaKredit$BoletaKreditBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/entity/BoletaKredit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/entity/BoletaKredit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/entity/ClienteKredit$ClienteKreditBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/entity/ClienteKredit$ClienteKreditBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/entity/ClienteKredit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/entity/ClienteKredit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/entity/MovimientoCasaCambio$MovimientoCasaCambioBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/entity/MovimientoCasaCambio$MovimientoCasaCambioBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/entity/MovimientoCasaCambio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/entity/MovimientoCasaCambio.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/model/BoletaSunat$BoletaSunatBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/model/BoletaSunat$BoletaSunatBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/model/BoletaSunat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/model/BoletaSunat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/model/DetalleSunat$DetalleSunatBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/model/DetalleSunat$DetalleSunatBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/model/DetalleSunat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/model/DetalleSunat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/repository/BoletaDetalleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/repository/BoletaDetalleRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/repository/BoletaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/repository/BoletaRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/repository/MovimientoCasaCambioRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/repository/MovimientoCasaCambioRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/repository/dao/MovimientoCasaCambioDao$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/repository/dao/MovimientoCasaCambioDao$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/repository/dao/MovimientoCasaCambioDao$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/repository/dao/MovimientoCasaCambioDao$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/repository/dao/MovimientoCasaCambioDao$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/repository/dao/MovimientoCasaCambioDao$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/repository/dao/MovimientoCasaCambioDao$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/repository/dao/MovimientoCasaCambioDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/repository/dao/MovimientoCasaCambioDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/service/BoletaDetalleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/service/BoletaDetalleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/service/BoletaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/service/BoletaService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/service/MovimientoCasaCambioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/service/MovimientoCasaCambioService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/service/impl/BoletaDetalleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/service/impl/BoletaDetalleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/service/impl/BoletaServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/service/impl/BoletaServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servicekerdit/service/impl/MovimientoCasaCambioServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servicekerdit/service/impl/MovimientoCasaCambioServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servicekerdit/entity/ClienteCasaCambio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/entity/ClienteCasaCambio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servicekerdit/repository/dao/ClineteCasaCambioDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/repository/dao/ClineteCasaCambioDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servicekerdit/service/impl/ClienteCasaCambioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servicekerdit/service/impl/ClienteCasaCambioServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/KreditRest-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/KreditRest-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/KreditRest-1.0.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/KreditRest-1.0.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,30 +144,30 @@
     </state>
     <state x="769" y="310" width="424" height="484" key="FileChooserDialogImpl/55.27.1865.1053@55.27.1865.1053" timestamp="1599752961779" />
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1591973661872" />
-    <state width="1819" height="420" key="GridCell.Tab.0.bottom" timestamp="1600618382571">
+    <state width="1819" height="420" key="GridCell.Tab.0.bottom" timestamp="1600619155558">
       <screen x="55" y="27" width="1865" height="1053" />
     </state>
-    <state width="1819" height="420" key="GridCell.Tab.0.bottom/55.27.1865.1053@55.27.1865.1053" timestamp="1600618382571" />
+    <state width="1819" height="420" key="GridCell.Tab.0.bottom/55.27.1865.1053@55.27.1865.1053" timestamp="1600619155558" />
     <state width="1853" height="399" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1591976576907" />
-    <state width="1819" height="420" key="GridCell.Tab.0.center" timestamp="1600618382571">
+    <state width="1819" height="420" key="GridCell.Tab.0.center" timestamp="1600619155558">
       <screen x="55" y="27" width="1865" height="1053" />
     </state>
-    <state width="1819" height="420" key="GridCell.Tab.0.center/55.27.1865.1053@55.27.1865.1053" timestamp="1600618382571" />
+    <state width="1819" height="420" key="GridCell.Tab.0.center/55.27.1865.1053@55.27.1865.1053" timestamp="1600619155558" />
     <state width="1853" height="399" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1591976576905" />
-    <state width="1819" height="420" key="GridCell.Tab.0.left" timestamp="1600618382571">
+    <state width="1819" height="420" key="GridCell.Tab.0.left" timestamp="1600619155557">
       <screen x="55" y="27" width="1865" height="1053" />
     </state>
-    <state width="1819" height="420" key="GridCell.Tab.0.left/55.27.1865.1053@55.27.1865.1053" timestamp="1600618382571" />
+    <state width="1819" height="420" key="GridCell.Tab.0.left/55.27.1865.1053@55.27.1865.1053" timestamp="1600619155557" />
     <state width="1853" height="399" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1591976576905" />
-    <state width="1819" height="420" key="GridCell.Tab.0.right" timestamp="1600618382571">
+    <state width="1819" height="420" key="GridCell.Tab.0.right" timestamp="1600619155558">
       <screen x="55" y="27" width="1865" height="1053" />
     </state>
-    <state width="1819" height="420" key="GridCell.Tab.0.right/55.27.1865.1053@55.27.1865.1053" timestamp="1600618382571" />
+    <state width="1819" height="420" key="GridCell.Tab.0.right/55.27.1865.1053@55.27.1865.1053" timestamp="1600619155558" />
     <state width="1853" height="399" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1591976576907" />
-    <state x="244" y="500" width="1144" height="580" key="find.popup" timestamp="1600349628924">
+    <state x="244" y="500" width="1144" height="580" key="find.popup" timestamp="1600618975452">
       <screen x="55" y="27" width="1865" height="1053" />
     </state>
-    <state x="244" y="500" width="1144" height="580" key="find.popup/55.27.1865.1053@55.27.1865.1053" timestamp="1600349628924" />
+    <state x="244" y="500" width="1144" height="580" key="find.popup/55.27.1865.1053@55.27.1865.1053" timestamp="1600618975452" />
     <state x="766" y="310" width="432" height="485" key="refactoring.ChangeSignatureDialog" timestamp="1600121087882">
       <screen x="55" y="27" width="1865" height="1053" />
     </state>

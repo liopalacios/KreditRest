@@ -198,7 +198,7 @@ public class CasaCambioController {
         System.out.println(monedaOrigen);
         System.out.println();
 
-        List<ClienteCasaCambio> clienteCasaCambio = clienteCasaCambioService.findByNumdocu(movimientoCasaCambio.getNumDocu());
+        List<ClienteCasaCambio> clienteCasaCambio = clienteCasaCambioService.findByNumdocu(movimientoCasaCambio.getNumDocu().trim());
 
         BoletaSunat boletaSunat = new BoletaSunat();
         boletaSunat.setDocumento_tipo_comprobante("03");
